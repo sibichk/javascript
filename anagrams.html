@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+   function anagram(firstwords,secondwords){
+    for(i=0;i<firstwords.length;i++){
+        if(firstwords[i].length == secondwords[i].length)
+        {
+            
+            var firstwords_sort=firstwords[i].split('').sort().join('');
+            var secondwords_sort=secondwords[i].split('').sort().join('');
+            if(firstwords_sort == secondwords_sort)
+            {
+                console.log("they're fucking anagrams");
+            }
+            else{
+                console.log("no, they ain't");
+            }
+        }
+        else{
+            console.log("no, they ain't");
+        }
+    }
+
+   }
+   firstwords=['hello','bosy','kill'];
+   secondwords=['ollhe','oyb','iksll'];
+   anagram.call(this,firstwords,secondwords);
+</script>
+</head>
+<body>
+</body>
+</html>

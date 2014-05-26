@@ -1,0 +1,88 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+body{
+	padding:0px;
+	margin:0px;
+	height:auto;
+	width:auto;
+}
+.box{
+	width:490px;
+	height:490px;
+	background-color: #eee;
+	margin-left:auto;
+  	margin-right:auto;
+  	margin-top:10%;
+}
+.innerBox{
+	width:150px;
+	height:150px;
+	background-color: #ccc;
+	display:inline-block;
+	margin-left:10px;
+	margin-top:10px;
+	font-size:34px;
+	text-align: center;
+	font-weight:bold;
+}
+#radio,button{
+	font-size: 24px;
+	text-align: center;
+}
+input[type="radio"]{
+    vertical-align:middle;
+	margin-left: 140px;
+    }
+.footer{
+    	text-align: center;
+    	padding-top: 40px;
+
+ }
+ .innerBox:hover{
+ 	border:dotted;
+ }
+</style>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.innerBox').click(function(){
+			val = $('input:radio[name=color]:checked').val();
+			if(val==undefined){
+				alert('Select a color before clicking on the boxes');
+			}
+			else{
+				current_bg=$(this).css('background-color');
+				
+				if(current_bg=='rgb(204, 204, 204)'){
+					$(this).css('background-color',val)
+				}
+				else if(current_bg=='rgb(0, 0, 255)'){
+					alert('already applied blue');
+				}
+				else if(current_bg=='rgb(255, 0, 0)'){
+					alert('already applied red');
+				}
+				else if(current_bg=='rgb(0, 128, 0)'){
+					alert('already applied green');
+				}
+			}
+			
+		})
+		$('button').click(function(){
+			$('.innerBox').css('background-color','#ccc')
+		})
+
+	})
+</script>
+<body>
+	<div id="radio"><input type="radio" name="color" value="RED">RED<input type="radio" name="color" value="BLUE">BLUE<input type="radio" name="color" value="GREEN">GREEN</div>
+	<div class="box">
+		<div class="innerBox">1</div><div class="innerBox">2</div><div class="innerBox">3</div>
+		<div class="innerBox">4</div><div class="innerBox">5</div><div class="innerBox">6</div>
+		<div class="innerBox">7</div><div class="innerBox">8</div><div class="innerBox">9</div>
+	</div>
+	<div class="footer"><button>RESET</button></div>
+</body>
+</html>

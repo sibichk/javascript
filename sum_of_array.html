@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	function sum(par){
+		var total = 0;
+		par.foreach(function(x){console.log(x);});
+		for (var i = 0, n = this.length; i < n; ++i)
+		{
+		    total += par[i];
+		}
+		console.log(total);
+	}
+	a= $('#num1').val();
+	b= $('#num2').val();
+	sum.apply(this,);
+</script>
+</head>
+<body>
+<input type="text" id="num1" />	<button type="submit" value="submit"> submit</button>	
+</body>

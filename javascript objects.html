@@ -1,0 +1,39 @@
+<html>
+    <head>
+<script type="text/javascript">
+    
+   JSONExample = {
+    "frames":90
+   }
+    
+        var JSONresult = JSON.parse(JSONExample);
+        console.log(JSONresult['frames']);
+            
+    JSONExample = {
+    "frames": {
+        "chaingun.png": {
+            "frame": {
+                "x": 1766,
+                "y": 202,
+                "w": 42,
+                "h": 34
+            }
+        }
+    }
+   }
+    JSONresult = function(JSONExample){
+        var result = JSON.parse(JSONExample);
+        console.log(result['frames']['chaingun.png']['frame']['x']);
+            
+            
+        }
+
+</script>
+        </head>
+    <body>
+        
+        sekfjbkjlbkjlk
+    </body>
+</html>
+
+

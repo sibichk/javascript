@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	$(document).ready(function(){
+		obj={}
+		function recurrence(str){
+			str_arr=(str).split('');
+			for(var i=0;i<str_arr.length;i++){
+				count=0
+				for(j=1;j<str_arr.length;j++)
+				{
+					if(str_arr[i] ==str_arr[j]){
+						console.log(str_arr[i])
+					}
+				}
+				
+			}
+
+		}
+		recurrence("ssdes");
+	});
+</script>
+</head>
+</html>

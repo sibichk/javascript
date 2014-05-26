@@ -1,0 +1,82 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+/* Consider the string ‘AAAABCCCCCDDDD’ consisting of alphabetic characters only. This string is of length 14. Since the string consists of alphabetic characters only, duplicate characters can be removed and replaced with a duplication factor n. With this technique the string can be compressed and represented by ‘4AB5C4D’. The compressed string is of length 7. 
+
+Write a function, which takes a string in compressed form and recreates the original uncompressed string. (Note: The duplication factor is not restricted to one digit. Hence you can have a compressed string that reads as ‘3A12BC’ and that expands to ‘AAABBBBBBBBBBBBC’.)   */
+var result=[];
+function uncompress(src){
+  var i=0;
+  while(i<src.length){
+  var number = /[0-9]+/.exec(src);
+  var alphabet= /[a-zA-z]/.exec(src);
+  var alphabet_num = /[0-9]+[a-zA-z]/.exec(src)
+  console.log(alphabet_num,alphabet,number);
+  a= repeat(alphabet,number)
+  src= src.replace(new RegExp(alphabet_num,"i"), "");
+  //myString.replace(new RegExp(oldWord,"g"), "");
+  console.log(a)
+  console.log(src)
+
+}
+  
+}
+
+function repeat(s, n){
+  var counter = parseFloat(result.length) + parseFloat(n);
+  //console.log(n,result.length,counter)
+    while(result.length < counter){
+        result.push(s);
+    }
+    return result.join('');
+}
+
+
+var out = uncompress('8A16B19C');
+
+
+/*
+function cut_string(str_val,pos,num_val){
+  var regexpr="/^.+"+str_val+"/";
+  var regex_final = new RegExp(regexpr,"i");
+  src.replace(regex_final,'');
+   repeat(str_val,num_val);  
+  return str_val;
+}
+function uncompress(src) {
+  var reg = /[a-zA-z]/g;
+  var num = /[0-9]/;
+  var num_value = num.exec(src);
+  var str_value = reg.exec(src);
+  var index = src.search(reg);
+
+
+  var regexpr="^.+"+str_value;
+  var regex_final = new RegExp(regexpr,"i");
+  console.log(regex_final)
+  src.replace(/^.+A/,'');
+  repeat(str_value,num_value);  
+  return src
+} */
+  /*cut_string(str_value,index,num_value) */
+  
+  /* arrStr=src.split('');
+  for(var i=0;i<arrStr.length;i++){
+   if(/^0-9/.test(arrStr[i]))
+     {
+        for(var j=i+1;j<arrStr.length;j++){
+          if(typeof(arrStr[j])=="string"){
+            var num=indexof(arrStr[j]);
+             arrStr.splice(arrStr[i],num+1);
+            console.log(arrStr)
+          }
+          
+        }
+       
+     }
+  } */
+</script>
+</head>
+</html>

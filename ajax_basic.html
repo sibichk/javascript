@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	function myfunction(){
+		console.log('hello');
+		var xmlhttp;
+		xmlhttp= new XMLHttpRequest();
+		xmlhttp.onreadystatechange=function(){
+			if(xmlhttp.readyState== 4 && xmlhttp.status== 200){
+				document.getElementById("content").innerhtml()=xmlhttp.responseText;
+			}
+		}
+		xmlhttp.open("GET","info.txt",true);
+		xmlhttp.send();
+	}
+</script>
+<html>
+	<div id="content" style="height:100px; width:100px; border:solid;"></div>
+	<button type="button" value="click" onclick="myfunction()">Click</button>
+</html>

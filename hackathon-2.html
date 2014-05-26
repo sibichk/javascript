@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	$(document).ready(function(){
+		function unpaired_regex(string){
+			pattern = /\((?=(\w|\d)*\))/g;
+			if(pattern.test(string)){
+				console.log('paired');
+			}
+			else{
+				console.log('unpaired');
+			}
+		}
+
+		unpaired_regex("(ab78(8)")
+	})
+</script>
+<body>
+
+</body>
+</html>
+
+<!-- pairing not possible in javascript cuz there's no way of counting pairs.  use function instead -->

@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	function email_regex(in){
+		var regex=/^([a-zA-Z])+.*@+[a-zA-Z]{2,}+\.+[a-zA-Z]{2,}/;
+		if(regex.test(in)){
+			console.log("it's vaild");
+		}
+		else{
+			console.log("it's not");
+		}
+	}
+
+	email_regex('sibi@ya.com')
+</script>
+</head>
+<body>
+</body>
+</html>

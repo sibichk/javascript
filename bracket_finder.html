@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	function bracket_match(par){
+		count_open =par.match(/\{/g);
+		count_close =par.match(/\}/g);
+		if(count_open == null && count_close.length>0){
+			console.log('unpaired');
+		}
+		else if(count_open.length>0 && count_close == null){
+			console.log('unpaired');
+		}
+		else if(count_open.length == count_close.length){
+			console.log('brackets paired');
+		}
+		else{
+			console.log('unpaired');
+		}
+	}
+
+	bracket_match('{[{[[][')
+</script>
+</head>
+<body>
+</body>
+</html>

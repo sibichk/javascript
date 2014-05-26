@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	function max(num1, num2){
+		if(num1<num2){
+			console.log(num2+" is bigger");
+		}
+		else if(num1==num2){
+			console.log("both have same value");
+		}
+		else{
+			console.log(num1+"is bigger");
+		}
+	}
+	$(document).ready(function(){
+		var a = $('#num1').val();
+		var b = $('#num2').val();
+		$('button').click(function(){
+			console.log(a);
+			console.log(b);
+			if(a>b){
+			console.log(a+"is bigger");
+		}
+		else{
+			console.log(b+"is bigger");	
+		}
+		})
+	})
+	max(3,4);
+
+</script>
+</head>
+<body>
+<input type="text" id="num1" />	<input type="text" id="num2"/><button type="submit" value="submit"> submit</button>	
+</body>
+</html>

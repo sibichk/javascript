@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	function filter(par)
+	{
+		number = par.pop();
+		len=par.length;
+		for(var i=0;i<len; i++){
+
+			if(par[i].length < number){
+				par.splice(i,1);
+			}
+		}
+		result=par.toString();
+		console.log(result);
+
+	}
+	arr = ["erfgweaf","jker","wq","wefwfwef","werw","w","w","w","w",2];
+	filter.call(this,arr)
+</script>
+
+</html>

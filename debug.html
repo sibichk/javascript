@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<body>
+ 
+<div class="d1" onclick="high()">1 
+    <div class="d2" onclick="highlight(this)">2
+        <div class="d3" onclick="highlight(this)">3
+        </div>
+    </div>
+</div>
+ 
+<script>
+function highlight(elem) {
+    elem.style.backgroundColor='yellow'
+    alert(elem.className)
+    elem.style.backgroundColor = ''
+    e.stopPropagation();
+}
+
+function high(){
+	$('.d3').css('border','solid');
+}
+</script>
+ 
+</body>
+</html>

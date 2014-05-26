@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	var difference = 0;
+	function array_deviation(){
+		for(var i=0;i<arr.length;i++){
+			res= arr.slice(i,i+(num));
+			if(res.length==3)
+			{
+				difference_val = (Math.max.apply(null, res)) - (Math.min.apply(null,res))
+				if(difference_val> difference)
+				{
+					difference = difference_val
+				}
+				
+			}
+		}
+		console.log(difference);
+	}
+	arr=[6,9,4,7,4,1]
+	var num=3;
+	array_deviation.call(arr,num)
+</script>
+</head>
+<body>
+</body>
+</html>
