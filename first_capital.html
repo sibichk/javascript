@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+	/*function first_capital(inp){
+		pattern=/\s+[a-z]/
+		res=inp.replace(pattern,pattern.exec(inp))
+		return res
+	}
+
+	console.log(first_capital('sibi is awesome'))
+    */
+    function uppercase(str)
+{
+  var array1 = str.split(' ');
+  var newarray1 = [];
+    
+  for(var x = 0; x < array1.length; x++){
+      newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+  }
+  return newarray1.join(' ');
+}
+console.log(uppercase("the quick brown fox"));
+</script>
+</head>
+<body>
+</body>
+</html>

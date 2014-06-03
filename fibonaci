@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	function fibonacci(fir,sec,len){
+		for(var i=0;i<len;i++){
+			var third = fir +sec;
+			console.log(third);
+			fir = sec;
+			sec=third;
+		}
+	}
+
+	var first=1;
+	var second=2;
+	var length=10;
+	fibonacci(first,second,length)
+</script>
+</head>
+<body>
+</body>
+</html>

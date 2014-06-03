@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script>
+	
+	function num_manipulation(){
+		var sum=0;
+		var a=Math.random()*10000;
+		a<1000 ? a=a+1000 : a=a;
+		a=Math.round(a);
+		res = a.toString().split('');
+		console.log(res);
+		for(var i=0;i<res.length-1;i++){
+
+			sum=parseInt(res[i])+parseInt(res[i+1])
+			console.log(sum)
+		}
+		if(sum.length>1){
+			out=(sum+'').split('');
+			console.log(out)
+			var j=0;
+			while(j<out.length-1){
+				out1=parseInt(out[j])+parseInt(out[j+1])
+				j++;
+			}
+		}
+		console.log(out1)
+		}
+	
+
+	num_manipulation()
+</script>
+</head>
+<body>
+</body>
+</html>

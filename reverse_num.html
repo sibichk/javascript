@@ -2,11 +2,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script>
-	function array_len(){
-
+	function reverse_num(num){
+		num=num.toString().split('').reverse().join('');
+		num=parseFloat(num)
+		console.log(num)
 	}
-	var a=[a,b,c]
-	array_len.apply(a)
+	
+	reverse_num(23456)
 </script>
 </head>
 <body>

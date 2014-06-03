@@ -2,11 +2,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script>
-	function array_len(){
-
+	function vowel_count(str){
+		pattern=/[aeiouAEIOU]/g
+		count=str.match(pattern)
+		return count.length
 	}
-	var a=[a,b,c]
-	array_len.apply(a)
+
+	console.log(vowel_count('The quick brown fox'))
 </script>
 </head>
 <body>

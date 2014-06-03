@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+	function identity_matrix(num){
+		var arr = new Array(num);
+		for(var i=0;i<num;i++){
+			for(var j=0;j<num;j++){
+				if(i==j)
+				{
+					console.log(1);
+				}else{
+					console.log(0)
+				}
+			}
+		}
+		console.log(arr[3][3])	
+	}
+	var num=4
+	identity_matrix(num)
+
+</script>
+</head>
+<body>
+</body>
+</html>

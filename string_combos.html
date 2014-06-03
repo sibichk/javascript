@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+	var substr=[];
+	function rev(combo){
+		str_arr=combo.split('');
+		for(var i=0;i<combo.length;i++){
+			for(var j=i+1;j<combo.length;j++){
+				substr.push(combo.substring(i,j));
+			}
+		}
+		return substr;
+	}
+
+	function sort_str(inp){
+		return inp.sort();
+	}
+	console.log(rev('avanyapuram'));
+	console.log(sort_srt('avanyapuram'));
+</script>
+<body>
+</body>
+</html>

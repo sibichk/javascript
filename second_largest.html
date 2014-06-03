@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+	function second_largest(inp){
+		 var high =Math.max.apply(null, inp);
+		 var ind=inp.indexOf(high)
+		 inp.splice(ind,1);
+		 var second_highest=Math.max.apply(null, inp)
+		 inp.splice(ind,0,high)
+		 console.log(inp)
+		 return second_highest
+		}
+	arr=[4,34,234,65,7]
+	console.log(second_largest(arr))
+</script>
+</head>
+<body>
+</body>
+</html>
