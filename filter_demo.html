@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://listjs.com/no-cdn/list.js"></script>
+</head>
+<body>
+<div id="lovely-things-list">
+<ul class="list">
+    <li>
+        <p class="category">Game</p>
+        <p class="description">category1</p>
+    </li>
+    <li>
+        <p class="category">NewCategory</p>
+        <p class="description">category2</p>
+    </li>
+    <li>
+        <p class="category">category3</p>
+        <p class="description">category3</p>
+    </li>
+</ul>
+</div>
+<p id="filter-games">Games</p>
+<p id="filter-NewCategory">NewCategory</p>
+<p id="filter-none">none</p>
+</body>
+<script type="text/javascript">
+ 
+ 
+    /*
+    * LOVELY THINGS
+    */
+$(document).ready(function() {
+    var templates = {
+        valueNames: [ 'description', 'category' ]
+    };
+ 
+    var featureList = new List('lovely-things-list', templates);
+ 
+    $('#filter-games').click(function() {
+        featureList.filter(function(item) {
+            if (item.values().category == "Game") {
+                return true;
+            } else {
+                return false;
+            }
+        });
+        return false;
+    });
+ 
+    $('#filter-NewCategory').click(function() {
+        featureList.filter(function(item) {
+            if (item.values().category == "NewCategory") {
+                return true;
+            } else {
+                return false;
+            }
+        });
+        return false;
+    });
+ 
+ 
+    $('#filter-beverages').click(function() {
+        featureList.filter(function(item) {
+            if (item.values().category == "Beverage") {
+                return true;
+            } else {
+                return false;
+            }
+        });
+        return false;
+    });
+    $('#filter-none').click(function() {
+        featureList.filter();
+    });
+});
+</script>
+</html>
