@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+	function no_of_words(inp){
+		inp=inp.trim();
+		pattern1=/\s{2,}|\n/g
+		inp=inp.replace(pattern1,' ')
+		var arr=inp.split(' ');
+
+		console.log(inp)
+		console.log(arr.length)
+	}
+
+	no_of_words('       el     lo  v  thi\ns \n    is four wo\nrds!')
+</script>
+</html>

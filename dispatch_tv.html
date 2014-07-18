@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script language="javascript1.6">var js_version="1.8">
+( function f( x, y, m ) {
+
+    if ( m > 0 ) { return f( y, x + y, m - 1 ); }
+    return y;
+
+}( 1, 2, 7 ) );
+//55
+
+
+var o = { a: 1, b: "1.0", c: false, d: true };
+var a = "b";
+console.log(o.a)
+console.log(o[ a ])
+console.log(o.a == o.b)
+console.log(o.a === o.b)
+console.log(o.b == o.d)
+console.log(o.a === o.d)
+console.log(o.c ? "a" : "b")
+console.log(o.e)
+console.log(o.e === null)
+console.log(o.e != null)
+</script>
+</head>
+<body>
+</body>
+</html>

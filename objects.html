@@ -1,0 +1,79 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	var student = {
+		name : "David Rayy",
+		sclass : "VI",
+		rollno : 12
+ }; 
+
+console.log(Object.getOwnPropertyNames(student)); //list object properties
+
+delete student.rollno;                            // delete property from object
+console.log(Object.getOwnPropertyNames(student));
+
+
+var i=0;                                       //find length of object
+function objsize(myobj){
+	var size=0, key;
+	for(key in myobj){
+		if(myobj.hasOwnProperty(key)){size++}
+	}
+	return size
+}
+
+var student = { 
+name : "David Rayy", 
+sclass : "VI", 
+rollno : 12, 
+age : 23
+};
+
+console.log(objsize(student));
+
+
+var library = [                              //get property from array of objects
+    {
+        title: 'Bill Gates',
+        author: 'The Road Ahead',
+        readingStatus: true
+    },
+    {
+        title: 'Steve Jobs',
+        author: 'Walter Isaacson',
+        readingStatus: true
+    },
+    {
+        title: 'Mockingjay: The Final Book of The Hunger Games',
+        author: 'Suzanne Collins',
+        readingStatus: false
+    }];
+for (var i = 0; i < library.length; i++) 
+   {
+	book =library[i].readingStatus;
+	console.log(book)
+}
+
+
+//Write a JavaScript program to get the volume of a Cylinder using object classes
+function Cylinder(cyl_height, cyl_radius){
+	this.cyl_height=cyl_height;
+	this.cyl_radius=cyl_radius;
+}
+
+Cylinder.prototype.Volume = function(){
+	var vol = 3.14 * this.cyl_radius * this.cyl_radius * this.cyl_height;
+	console.log(vol);
+}
+
+var cyl = new Cylinder(7,2);
+cyl.Volume()
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
