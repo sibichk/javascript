@@ -12,27 +12,23 @@ function uncompress(src){
   while(i<src.length){
   var number = /[0-9]+/.exec(src);
   var alphabet= /[a-zA-z]/.exec(src);
-  var alphabet_num = /[0-9]+[a-zA-z]/.exec(src)
+  var alphabet_num = /[0-9]+[a-zA-z]/.exec(src);
   console.log(alphabet_num,alphabet,number);
   a= repeat(alphabet,number)
   src= src.replace(new RegExp(alphabet_num,"i"), "");
-  //myString.replace(new RegExp(oldWord,"g"), "");
   console.log(a)
   console.log(src)
-
-}
+  }
   
 }
 
 function repeat(s, n){
   var counter = parseFloat(result.length) + parseFloat(n);
-  //console.log(n,result.length,counter)
-    while(result.length < counter){
-        result.push(s);
-    }
-    return result.join('');
+  while(result.length < counter){
+      result.push(s);
+  }
+  return result.join('');
 }
-
 
 var out = uncompress('8A16B19C');
 

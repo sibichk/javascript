@@ -3,15 +3,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
-
-	function bubble_sort(inp){
-		console.log(inp)
+	var i,j;
+	var temp;
+	function bubble_sort(arr){
+		var len = arr.length;
+		for(j=0;j<len-1;j++){
+			for(i=0;i<arr.length-1;i++){
+				if(arr[i]>arr[i+1]){
+					temp = arr[i];
+					arr[i] = arr[i+1];
+					arr[i+1] = temp;
+				}
+			}	
+		}
+		console.log(arr);
 	}
-
-
 	var arr = [6,4,0,3,-2,1];
-	bubble_sort.apply(this,arr);
-
+	bubble_sort.call(this,arr);
 
 </script>
 </head>
