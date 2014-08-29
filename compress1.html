@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+/* Consider the string ‘AAAABCCCCCDDDD’ consisting of alphabetic characters only. This string is of length 14. Since the string consists of alphabetic characters only, duplicate characters can be removed and replaced with a duplication factor n. With this technique the string can be compressed and represented by ‘4AB5C4D’. The compressed string is of length 7. 
+
+Write a function, which takes a string in compressed form and recreates the original uncompressed string. (Note: The duplication factor is not restricted to one digit. Hence you can have a compressed string that reads as ‘3A12BC’ and that expands to ‘AAABBBBBBBBBBBBC’.)   */
+
+function compress(string){
+	var occurence = string.match(/[0-9]+\w/g);
+	//parseInt(occurence[0])
+	multiply(occurence)
+}
+
+function multiply(inp){
+
+	console.log(inp);
+}
+
+
+
+</script>
+</head>
+</html>

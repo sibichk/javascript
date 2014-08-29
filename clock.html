@@ -1,20 +1,30 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script>
-			function Clock(){
-				this.cur_time = new Date();
-				this.hours = this.cur_time.getHours();
-				this.mins = this.cur_time.getMinutes();
-				this.secs = this.cur_time.getSeconds();
-			}
-			Clock.prototype.run = function(){
-				console.log(hours, mins, secs)
-			};
+<!DOCTYPE html>
+<html>
+<body>
 
-			var go = new Clock();
-			go.run();
-		</script>
-	</head>
+<p>Click the button to display the time.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function addZero(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+
+function myFunction() {
+    var d = new Date();
+    var x = document.getElementById("demo");
+    var h = addZero(d.getHours());
+    var m = addZero(d.getMinutes());
+    var s = addZero(d.getSeconds());
+    x.innerHTML = h + ":" + m + ":" + s;
+}
+</script>
+
+</body>
 </html>

@@ -1,0 +1,88 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script>
+				function LinkedList() {
+				    this._length = 0;
+				    this._head = null;
+				}
+
+				LinkedList.prototype = {
+
+			    add: function (data){
+
+			        //create a new node, place data in
+			        var node = {
+			                data: data,
+			                next: null
+			            }
+
+			            //used to traverse the structure
+			            //current;
+
+			        //special case: no items in the list yet
+			        if (this._head === null){
+			            this._head = node;
+			        } else {
+			            current = this._head;
+
+			            while(current.next){
+			                current = current.next;
+			            }
+
+			            current.next = node;
+			        }
+
+			        //don't forget to update the count
+			        this._length++;
+			        
+			    },
+			    item: function(index){
+
+		        //check for out-of-bounds values
+		        if (index > -1 && index < this._length){
+		            var current = this._head,
+		                i = 0;
+
+		            while(i++ < index){
+		                current = current.next;
+		            }
+
+		            return current.data;
+		        } else {
+		            return null;
+		        }
+		    }
+
+			    //more methods here
+			};
+
+			var list = new LinkedList();
+			list.add("red");
+			list.add("blue");
+
+			alert(list.item(1));
+		</script>
+	</head>
+
+
+
+<!--
+function LinkedList(data){
+				this.data=data;
+				this.next=null;
+			}
+			LinkedList.prototype.newnode =function(value) {
+				var node = new LinkedList(value);
+			}
+			LinkedList(5);
+one ={
+	data : ""
+	next :obj_name(two)
+}
+
+one.next = two ={
+	data : ""
+	next :obj_name(three)
+}-->
+</html>
